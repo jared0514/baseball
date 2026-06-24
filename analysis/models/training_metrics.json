@@ -1,0 +1,93 @@
+{
+  "baseline": {
+    "model": "LogisticRegression",
+    "cv_accuracies": [
+      0.5714,
+      0.5905,
+      0.5333,
+      0.6095,
+      0.5905
+    ],
+    "mean_accuracy": 0.579,
+    "std_accuracy": 0.0258,
+    "pooled_auc_roc": 0.6065,
+    "pooled_precision": 0.6035,
+    "pooled_recall": 0.5959,
+    "pooled_f1": 0.5996
+  },
+  "random_forest": {
+    "model": "RandomForest",
+    "best_params": {
+      "max_depth": 3,
+      "min_samples_split": 2,
+      "n_estimators": 200
+    },
+    "cv_accuracies": [
+      0.5857,
+      0.5786,
+      0.5143,
+      0.6262,
+      0.5881
+    ],
+    "mean_accuracy": 0.5786,
+    "std_accuracy": 0.0362,
+    "pooled_auc_roc": 0.601,
+    "pooled_precision": 0.6018,
+    "pooled_recall": 0.6013,
+    "pooled_f1": 0.6015,
+    "confusion_matrix": [
+      [
+        547,
+        442
+      ],
+      [
+        443,
+        668
+      ]
+    ]
+  },
+  "shap": {
+    "feature_importance": {
+      "win_pct_diff": 0.050345,
+      "away_win_pct": 0.02779,
+      "home_win_pct": 0.019615,
+      "home_run_diff": 0.0,
+      "away_run_diff": 0.0,
+      "run_diff_diff": 0.0,
+      "home_scoring_rate": 0.0,
+      "away_scoring_rate": 0.0,
+      "scoring_rate_diff": 0.0,
+      "home_advantage": 0.0
+    },
+    "feature_labels_cn": {
+      "home_win_pct": "主隊勝率",
+      "away_win_pct": "客隊勝率",
+      "win_pct_diff": "勝率差",
+      "home_run_diff": "主隊得失分差",
+      "away_run_diff": "客隊得失分差",
+      "run_diff_diff": "得失分差之差",
+      "home_scoring_rate": "主隊得分比率",
+      "away_scoring_rate": "客隊得分比率",
+      "scoring_rate_diff": "得分比率差",
+      "home_advantage": "主場優勢"
+    },
+    "sample_size": 500,
+    "total_features": 10
+  },
+  "dataset_info": {
+    "total_games": 2521,
+    "home_win_rate": 0.5208,
+    "features": [
+      "home_win_pct",
+      "away_win_pct",
+      "win_pct_diff",
+      "home_run_diff",
+      "away_run_diff",
+      "run_diff_diff",
+      "home_scoring_rate",
+      "away_scoring_rate",
+      "scoring_rate_diff",
+      "home_advantage"
+    ]
+  }
+}
